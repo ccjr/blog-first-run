@@ -5,6 +5,6 @@ Blog::Application.routes.draw do |map|
   end
   resources :users
   resource :session
-  match '/login', :to => "sessions#new"
-  match '/logout', :to => "sessions#destroy"
+  match '/login', :to => "sessions#new", :as => "login"
+  match '/logout', :to => "sessions#destroy", :as => "logout"
 end
