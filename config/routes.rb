@@ -4,4 +4,5 @@ Blog::Application.routes.draw do |map|
     resources :comments
   end
   resources :users
+  resource :session
 end
