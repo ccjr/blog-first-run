@@ -6,5 +6,5 @@
       <%= link_to "Delete", article, :confirm => "Are you sure?", :method => :delete %>
     </span>
   </h3>
-  <%= article.body %>
+  <%= raw simple_format(article.body) %>
 </div>
