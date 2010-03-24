@@ -80,6 +80,7 @@ a:hover {
 }
 
 #main form br{
+  display: none;
   float: left;
 }
 
@@ -151,16 +152,6 @@ pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-}
-
-a {
-color:#D95E16;
-padding:0 2px;
-text-decoration:none;
-}
-a:hover {
-background-color:#FF813C;
-color:#FFFFFF;
 }
 
 .fieldWithErrors {
