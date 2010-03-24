@@ -22,7 +22,7 @@
   </div>
   <div id="main">
     <%= content_tag(:p, notice, :class => 'notice') if notice.present? %>
-    <%= content_tag(:p, alert, :class => 'notice') if alert.present? %>
+    <%= content_tag(:p, alert, :class => 'alert') if alert.present? %>
     <%= yield %>
   </div>
   <div id="footer">
