@@ -2,7 +2,7 @@
   <h3>
     <%= comment.name %> &lt;<%= comment.email %>&gt; said:
     <span class='actions'>
-      <%= link_to 'Delete', [@article, comment], :confirm => 'Are you sure?', :method => :delete, :remote => true, :loading => "alert('hello')" %>
+      <%= link_to 'Delete', [@article, comment], :confirm => 'Are you sure?', :method => :delete, :remote => true, :complete => "alert(request.status)" %>
     </span>
   </h3>
   <%= comment.body %>
