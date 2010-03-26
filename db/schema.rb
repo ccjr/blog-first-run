@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(:version => 20100320204433) do
     t.datetime "updated_at"
     t.string   "excerpt"
     t.string   "location"
-    t.string   "author"
-    t.integer  "author_id"
     t.integer  "user_id"
   end
 
