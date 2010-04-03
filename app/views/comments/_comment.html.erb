@@ -1,4 +1,4 @@
-<div class='comment'>
+<% div_for comment do %>
   <h3>
     <%= comment.name %> &lt;<%= comment.email %>&gt; said:
     <% if @article.owned_by? current_user %>
@@ -8,4 +8,4 @@
     <% end %>
   </h3>
   <%= comment.body %>
-</div>
+<% end %>
