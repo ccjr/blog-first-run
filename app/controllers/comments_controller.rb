@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-  before_filter :load_article
+  before_filter :load_article, :only => :create
+  before_filter :authenticate, :only => :destroy
 
   def create
     @comment = @article.comments.new(params[:comment])
@@ -17,6 +18,7 @@ class CommentsController < ApplicationController
   end
   
   def destroy
+    @article = current_user.articles.find(params[:article_id])
     @comment = @article.comments.find(params[:id])
     @comment.destroy
     respond_to do |format|
