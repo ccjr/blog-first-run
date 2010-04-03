@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     else
       respond_to do |format|
         format.html { redirect_to @article, :alert => 'Unable to add comment' }
-        format.js
+        format.js { render 'fail_create.js.erb' }
       end
     end
   end
