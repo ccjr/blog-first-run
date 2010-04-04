@@ -13,7 +13,19 @@ Blog::Application.configure do
   config.consider_all_requests_local       = true
   config.action_view.debug_rjs             = true
   config.action_controller.perform_caching = false
+  
+  # Email configuration
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  #ActionMailer::Base.default_url_options[:host] = 'localhost:3000'
 
-  # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  # Gmail SMTP server setup
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :enable_starttls_auto => true,
+    :port => 587,
+    :authentication => :plain,
+    :user_name => "beginningrails@gmail.com",
+    :password => 'pleasechange'
+  }
 end
