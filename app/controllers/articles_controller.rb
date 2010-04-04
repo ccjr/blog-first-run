@@ -85,7 +85,7 @@ class ArticlesController < ApplicationController
   
   def notify_friend
     @article = Article.find(params[:id])
-    Notification.email_friend(@article, params[:name], params[:email]).deliver
-    redirect_to @article
+    Notifier.email_friend(@article, params[:name], params[:email]).deliver
+    redirect_to @article, :notice => "Successfully sent a message to your friend"
   end
 end
