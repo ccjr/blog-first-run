@@ -8,6 +8,6 @@ Bundler.require :default, Rails.env
 module Blog
   class Application < Rails::Application
     config.active_record.observers = :comment_observer
-    #config.filter_parameters << :password
+    config.filter_parameters << :password
   end
 end

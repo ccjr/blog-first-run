@@ -6,13 +6,10 @@ class Notification < ActionMailer::Base
   #
   #   en.actionmailer.notification.email_friend.subject
   #
-  def email_friend(article, sender_name, receiver_email)
-    @article = article
-    @sender_name = sender_name
-    
-    attachments["rails.png"] = File.read(Rails.root.join("public/images/rails.png"))
+  def email_friend
+    @greeting = "Hi"
 
-    mail :to => receiver_email
+    mail :to => "rbarazi@gmail.com"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml

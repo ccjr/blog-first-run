@@ -1,5 +1,5 @@
 class CommentObserver < ActiveRecord::Observer
   def after_create(comment)
-    Notification.comment_added(comment.article).deliver
+    puts "We will notify the author in Chapter 9"
   end
 end
