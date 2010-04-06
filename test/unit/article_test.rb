@@ -20,4 +20,20 @@ class ArticleTest < ActiveSupport::TestCase
     article = articles(:welcome_to_rails)
     assert article.update_attributes(:title => 'New title')
   end
+  
+  test "should destroy article" do
+    article = articles(:welcome_to_rails)
+    article.destroy
+    assert_raise(ActiveRecord::RecordNotFound) { Article.find(article.id) }
+  end
+
+  test "should not create invalid article" do
+    article = Article.new
+    assert !article.valid?
+    assert article.errors[:title].any?
+    assert article.errors[:body].any?
+    assert_equal ["can't be blank"], article.errors[:title]
+    assert_equal ["can't be blank"], article.errors[:body]
+    assert !article.save
+  end
 end
