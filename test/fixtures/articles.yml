@@ -1,15 +1,5 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  title: MyString
-  location: MyString
-  excerpt: MyString
-  body: MyText
-  published_at: 2010-02-23 18:39:52
-
-two:
-  title: MyString
-  location: MyString
-  excerpt: MyString
-  body: MyText
-  published_at: 2010-02-23 18:39:52
+welcome_to_rails:
+  user: eugene
+  title: "Welcome to Rails"
+  body: "Rails is such a nice web framework written in Ruby"
+  published_at: <%= 3.days.ago %>
