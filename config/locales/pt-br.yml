@@ -1,33 +1,33 @@
 pt-br: 
   general: 
-    are_you_sure: Are you sure?
-    back: Back
-    cancel: Cancel
-    create: Create
-    delete: Delete
-    edit: Edit
-    editing: Editing
-    footer: A simple blog built for the book
-    email_a_friend: Email a friend
-    search: Search
-    send_email: Send email
-    show: Show
+    are_you_sure: Tem certeza?
+    back: Volta
+    cancel: Cancelar
+    create: Criar
+    delete: Apagar
+    edit: Editar
+    editing: Editando
+    footer: Um blog simples desenvolvido para o livro
+    email_a_friend: Avisar um amigo
+    search: Pesquisar
+    send_email: Mandar email
+    show: Mostrar
     title: Blog
-    update: Update
-    your_name: Your name
-    your_friend_email: Your friend's email
-    or: or
+    update: Atualizar
+    your_name: Seu nome
+    your_friend_email: O email do seu amigo
+    or: ou
   application:
-    access_denied: Please log in to continue
+    access_denied: "Por favor, efetue o login para continuar"
   articles:
-    editing_article: Editing Article
-    listing_articles: Listing Articles
-    new_article: New Article
-    article: article
-    create_success: Article was successfully created.
-    update_success: Article was successfully updated.
-    articles: articles
-    notify_friend_success: Successfully sent a message to your friend
+    editing_article: Editando Artigo
+    listing_articles: Listando Artigos
+    new_article: Novo Artigo
+    article: artigo
+    create_success: Artigo foi criado com sucesso.
+    update_success: Artigo foi atualizado com sucesso.
+    articles: artigos
+    notify_friend_success: Seu amigo foi avisado a respeito desse artigo
   users:
     new_user: New user
     edit_password: Edit Password
@@ -35,16 +35,26 @@ pt-br:
     create_success: User successfully added.
     update_success: Updated user information successfully.
   sessions:
-    login: Login
-    logout: Logout
-    invalid_login: Invalid login/password combination
-    logout_success: You successfully logged out
+    login: Logar
+    logout: Desconectar
+    invalid_login: Senha ou Email invalidos
+    logout_success: Voce desconectou do sistem com sucesso
   comments:
-    comments: Comments
-    new_comment: New comment
-    create_success: Thanks for your comment
-    create_failure: Unable to add comment
-    destroy_success: Comment deleted
-    add: Add
+    comments: Comentarios
+    new_comment: Novo Comentario
+    create_success: Obrigado pelo comentario
+    create_failure: Nao foi possivel adicionar o comentario
+    destroy_success: Comentario deletado
+    add: Adicionar
     errors: 
-      not_published_yet: is not published yet
+      not_published_yet: ainda nao foi publicado
+    
+  activerecord:
+    errors:
+      models:
+        article:
+          attributes:
+            title:
+              blank: "não pode ficar em branco"
+            body:
+              blank: "não pode ficar em branco"
