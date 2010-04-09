@@ -3,7 +3,7 @@
     <%= comment.name %> &lt;<%= comment.email %>&gt; said:
     <% if @article.owned_by? current_user %>
       <span class='actions'>
-        <%= link_to 'Delete', [@article, comment], :confirm => 'Are you sure?', :method => :delete, :remote => true %>
+        <%= link_to t('general.delete'), [@article, comment], :confirm => t('general.are_you_sure'), :method => :delete, :remote => true %>
       </span>
     <% end %>
   </h3>
