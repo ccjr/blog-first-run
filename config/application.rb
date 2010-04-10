@@ -9,6 +9,6 @@ module Blog
   class Application < Rails::Application
     config.active_record.observers = :comment_observer
     config.filter_parameters << :password
-    config.i18n.default_locale = 'pt-br'
+    config.i18n.default_locale = 'en'
   end
 end
